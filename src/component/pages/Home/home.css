@@ -1,0 +1,168 @@
+/* home.css */
+body {
+    background-image: url('./raindrop3.jpeg');
+    background-size: cover; /* Optional: to cover the entire element */
+    background-repeat: no-repeat; /* Optional: to prevent the image from repeating */
+}
+.homepage {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfaf87",endColorstr="#fcfcfc",GradientType=1);
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    /* background-color: #adadad; */
+    background: linear-gradient(rgb(2, 40, 83), rgb(217, 220, 221));
+    width: 750px;
+   margin-left: 250px;
+   border-radius: 40px;
+   border: solid 2px rgb(148, 148, 148);
+}
+
+h2 {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.homepage .homehead p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+   color: #000000;
+   background-color: #ffffff;
+   background: linear-gradient(rgb(2, 40, 83), rgb(217, 220, 221));
+   width: 350px;
+   margin-left: 450px;
+   border-radius: 40px;
+   border: solid 2px rgb(148, 148, 148);
+
+    
+
+}
+
+/* About and Guestbook Sections */
+.about, .guestbook {
+    background: linear-gradient(rgb(243, 243, 243) ,rgba(87, 214, 214, 0.61));
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transition for smooth hover effect */
+    opacity: 1; /* Visible by default */
+    
+}
+.about p{
+    color: #000000;
+}
+.fo{
+    color: #000;
+    font-size: medium;
+    font-weight: 600;
+}
+
+/* Hover effect for both .about and .guestbook */
+.about:hover, .guestbook:hover {
+    box-shadow: 0px 8px 16px rgba(253, 0, 0, 0.2); /* Deeper shadow on hover */
+    background-color: #918585; /* Light gray background on hover */
+}
+
+/* Animation for About - Slide in from left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* End at the normal position */
+        opacity: 1;
+    }
+}
+
+/* Animation for Guestbook - Slide in from right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* End at the normal position */
+        opacity: 1;
+    }
+}
+
+/* Apply the animations */
+.about {
+    animation: slideInLeft 1s ease-out; /* Slide in from left slowly */
+}
+
+.guestbook {
+    animation: slideInRight 1s ease-out; /* Slide in from right slowly */
+}
+
+/* Optional: Adjust hover effect to make the sections slightly move */
+.about:hover, .guestbook:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* About image style */
+.about img {
+    width: 200px; /* Adjust width */
+    height: 200px; /* Adjust height to match width */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.guestbook a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.guestbook a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #e71a1a;
+}
+
+footer a {
+    color: #ff0000;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .homepage {
+        padding: 10px;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .about img {
+        width: 200px; /* Adjust width */
+        height: 200px; /* Adjust height to match width */
+        border-radius: 50%; /* Make the image circular */
+        margin-right: 20px;
+        vertical-align: top;
+    }
+}
